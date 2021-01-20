@@ -1,14 +1,14 @@
 ﻿var submit = document.getElementById("submitButton");
-//calculate the numeric grade first
+
 
 submit.addEventListener("click", function () {
-
+	//calculate the numeric grade first
 	var numericGrade = document.getElementById("Assignments").value * 0.5 + document.getElementById("group").value * 0.1 +
 		document.getElementById("Quizzes").value * 0.1 +
 		document.getElementById("Exams").value * 0.2 +
 		document.getElementById("INTEX").value * 0.1;
 	var letterGrade = "";
-	alert(numericGrade);
+	//if statements to see which letter grade they get
 	if (numericGrade >= 94) {
 		var letterGrade = "A";
 	}
@@ -45,8 +45,7 @@ submit.addEventListener("click", function () {
 	else  {
 		var letterGrade = "E";
 	}
-	alert(letterGrade);
-
+	//show on the page bottom
 	document.getElementById("numericGrade").innerHTML = "Your Numeric Grade is: " + numericGrade;
 	document.getElementById("letterGrade").innerHTML = "Your Letter Grade is: " + letterGrade;
 });
